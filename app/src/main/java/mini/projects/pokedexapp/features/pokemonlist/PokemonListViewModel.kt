@@ -21,7 +21,7 @@ class PokemonListViewModel @Inject constructor(
     private val repository: PokemonRepository
 ) : ViewModel() {
 
-    private var curPage = 20
+    private var curPage = 0
 
     var pokemonList = mutableStateOf<List<Pokemon>>(listOf())
     var loadError = mutableStateOf("")
@@ -75,6 +75,8 @@ class PokemonListViewModel @Inject constructor(
                     loadError.value = result.message!!
                     isLoading.value = false
                 }
+
+                else -> {}
             }
         }
     }
