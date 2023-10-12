@@ -23,21 +23,21 @@ data class PokemonDetail(
     @SerializedName("location_area_encounters")
     val locationAreaEncounters: String?,
     @SerializedName("moves")
-    val moves: List<Move?>?,
+    val moves: List<Move>?,
     @SerializedName("name")
     val name: String?,
     @SerializedName("order")
     val order: Int?,
     @SerializedName("past_types")
-    val pastTypes: List<Any?>?,
+    val pastTypes: List<Any>?,
     @SerializedName("species")
     val species: Species?,
     @SerializedName("sprites")
     val sprites: Sprites?,
     @SerializedName("stats")
-    val stats: List<Stat?>?,
+    val stats: List<Stat>?,
     @SerializedName("types")
-    val types: List<Type?>?,
+    val types: List<Type>?,
     @SerializedName("weight")
     val weight: Int?
 ) {
@@ -534,7 +534,7 @@ data class PokemonDetail(
 
     data class Stat(
         @SerializedName("base_stat")
-        val baseStat: Int?,
+        val baseStat: Int,
         @SerializedName("effort")
         val effort: Int?,
         @SerializedName("stat")
