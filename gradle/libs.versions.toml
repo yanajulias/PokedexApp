@@ -12,6 +12,7 @@ lifecycle-runtime-ktx = "2.6.2"
 activity-compose = "1.8.0"
 compose-bom = "2023.10.00"
 navigation = "2.7.4"
+pallete = "1.0.0"
 
 #Http
 retrofit = "2.9.0"
@@ -52,6 +53,9 @@ material-icons = { module = "androidx.compose.material:material-icons-extended" 
 lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose" }
 lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose" }
 lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle-runtime-ktx" }
+navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigation" }
+navigation-runtime-ktx = { module = "androidx.navigation:navigation-runtime-ktx", version.ref = "navigation" }
+palette-ktx = {module = "androidx.palette:palette-ktx", version.ref = "pallete"}
 
 #Http
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
