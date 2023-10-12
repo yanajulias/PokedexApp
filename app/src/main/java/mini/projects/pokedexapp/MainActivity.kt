@@ -11,8 +11,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import dagger.hilt.android.AndroidEntryPoint
+import mini.projects.pokedexapp.features.pokemondetail.PokemonDetailScreen
 import mini.projects.pokedexapp.features.pokemonlist.PokemonListScreen
 import mini.projects.pokedexapp.ui.theme.PokedexAppTheme
+import java.util.Locale
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -47,8 +49,15 @@ class MainActivity : ComponentActivity() {
                             it.arguments?.getString("pokemonName")
                         }
 
-                    }
+                        if (pokemonName != null) {
+                            PokemonDetailScreen(
+                                dominantColor = dominantColor,
+                                pokemonName = pokemonName.lowercase(Locale(localClassName)),
+                                navController = navController
+                            )
+                        }
 
+                    }
                 }
             }
         }
